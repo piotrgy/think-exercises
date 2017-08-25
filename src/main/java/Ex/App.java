@@ -2,8 +2,8 @@ package Ex;
 
 import java.io.IOException;
 
-import static Ex.Decoding.decodeDigitsToIntNumber;
-import static Ex.Decoding.getStringOfDigits;
+import static Ex.Decoding.decodeBigLetter;
+import static Ex.Decoding.decodePunctuationMark;
 
 /**
  * Hello world!
@@ -43,10 +43,12 @@ public class App
         //*********************************************************************************
 
         //dekodowanie1
-        System.out.println("Enter a digits for number (k - if end):"); //two digit number:");
-        /*int number =*/ getStringOfDigits();//decodeDigitsToIntNumber(); //decodeTwoDigitNumber();
-        //System.out.println("The number of these digits is: "+number);
-
+        /*System.out.println("Enter a digits for number (k - if end):"); //two digit number:");
+        *//*int number =*//* getStringOfDigits();//decodeDigitsToIntNumber(); //decodeTwoDigitNumber();
+        //System.out.println("The number of these digits is: "+number);*/
+        System.out.println("Enter a number from 1 to 8");
+        char c = decodePunctuationMark();
+        System.out.println("You've entered "+c);
 
 
 
