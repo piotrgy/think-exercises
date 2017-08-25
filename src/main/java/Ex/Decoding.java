@@ -1,5 +1,7 @@
 package Ex;
 
+import java.util.Scanner;
+
 import static Ex.LuhnNumbers.getCharToDigit;
 
 /**
@@ -55,5 +57,29 @@ public class Decoding {
             System.out.print("Entered number: "+ number);
         }while (digit != END);
 
+    }
+
+    public static char decodeBigLetter() {//range 1 to 26
+        Scanner s = new Scanner(System.in);
+        int myInt = s.nextInt();
+        return (char)(myInt + 'A' - 1);
+    }
+
+    public static char decodePunctuationMark() {//range 1 to 8
+        Scanner s = new Scanner(System.in);
+        int myInt = s.nextInt();
+        char out;
+        switch (myInt) {
+            case 1 : out = '!'; break;
+            case 2 : out = '?'; break;
+            case 3 : out = ','; break;
+            case 4 : out = '.'; break;
+            case 5 : out = ' '; break;
+            case 6 : out = ';'; break;
+            case 7 : out = '"'; break;
+            case 8 : out = '\''; break;
+            default: out = '*';
+        }
+        return out;
     }
 }
