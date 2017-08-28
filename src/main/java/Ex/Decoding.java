@@ -8,6 +8,54 @@ import static Ex.LuhnNumbers.getCharToDigit;
  * Created by piotrg on 2017-08-24.
  */
 public class Decoding {
+
+    public enum ModeType {
+        UPPERCASE,
+        LOWERCASE,
+        PUNCTUATION
+    }
+
+    private static ModeType mode = ModeType.UPPERCASE;
+
+
+    public static void changeMode() {
+        int number;
+        System.out.println("Enter few digits, ending by -1: ");
+        do {
+            Scanner s = new Scanner(System.in);
+            number = s.nextInt();
+            switch (mode) {
+                case UPPERCASE :
+                    number = number % 27;
+                    System.out.println("Modulo 27: "+number);
+                    if (number == 0) {
+                        System.out.println("Changing to lowercase mode.");
+                        mode = ModeType.LOWERCASE;
+                    }
+                    break;
+                case LOWERCASE :
+                    number = number % 27;
+                    System.out.println("Modulo 27: "+number);
+                    if (number == 0) {
+                        System.out.println("Changing to punctuation mode.");
+                        mode = ModeType.PUNCTUATION;
+                    }
+                    break;
+                case PUNCTUATION :
+                    number = number % 9;
+                    System.out.println("Modulo 9: "+number);
+                    if (number == 0) {
+                        System.out.println("Changing to uppercase mode.");
+                        mode = ModeType.UPPERCASE;
+                    }
+                    break;
+            }
+
+        }while (number != -1);
+
+
+    }
+
     public static int decodeTwoDigitNumber() {
         return getCharToDigit() * 10 + getCharToDigit();
     }
