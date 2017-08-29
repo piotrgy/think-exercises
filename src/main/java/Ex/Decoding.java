@@ -87,23 +87,20 @@ public class Decoding {
 
     }
 
-    public static void getStringOfDigits() {
+    public static int getStringOfDigits() {
         int number;
-        final int END = 20; //letter k
         final int SEPARATOR = -1; //punctuation mark
 
-        int digit;
-        do {
-            digit = getCharToDigit();
+        int digit = getCharToDigit();
             number = digit;
 
             digit = getCharToDigit();
-            while (digit != END && digit != SEPARATOR) {
+            while (digit != SEPARATOR) {
                 number = number * 10 + digit;
                 digit = getCharToDigit();
             }
             System.out.print("Entered number: "+ number);
-        }while (digit != END);
+        return number;
 
     }
 
