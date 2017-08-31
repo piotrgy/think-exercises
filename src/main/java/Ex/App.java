@@ -43,7 +43,7 @@ public class App
 
         //dekodowanie1
         /*System.out.println("Enter a digits for number (k - if end):"); //two digit number:");
-        *//*int number =*/ getStringOfDigits();//decodeDigitsToIntNumber(); //decodeTwoDigitNumber();
+        *//*int number =*/ //getStringOfDigits();//decodeDigitsToIntNumber(); //decodeTwoDigitNumber();
         //System.out.println("The number of these digits is: "+number);
 
         /*System.out.println("Enter a number from 1 to 8");
@@ -53,6 +53,11 @@ public class App
         //changeMode();
         //2 1 0 52 53 54 55 6 7 8 9 10 -1
 
+        //letter's decoding
+        final char UPPER = 'A';
+        final char LOWER = 'a';
+        System.out.println(decodeLetter(5, UPPER));
+        System.out.println(decodeLetter(6, LOWER));
 
 
 

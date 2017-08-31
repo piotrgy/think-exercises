@@ -14,7 +14,6 @@ public class Decoding {
         LOWERCASE,
         PUNCTUATION
     }
-
     private static ModeType mode = ModeType.UPPERCASE;
 
 
@@ -104,10 +103,9 @@ public class Decoding {
 
     }
 
-    public static char decodeBigLetter() {//range 1 to 26
-        Scanner s = new Scanner(System.in);
-        int myInt = s.nextInt();
-        return (char)(myInt + 'A' - 1);
+
+    public static char decodeLetter(int number, char theCase) {//range 1 to 26 , case A or a
+        return (char)(number + theCase - 1);
     }
 
     public static char decodePunctuationMark() {//range 1 to 8
