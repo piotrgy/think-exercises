@@ -17,12 +17,7 @@ public class Decoding {
     private static ModeType mode = ModeType.UPPERCASE;
 
 
-    public static void changeMode() {
-        int number;
-        System.out.println("Enter few digits, ending by -1: ");
-        do {
-            Scanner s = new Scanner(System.in);
-            number = s.nextInt();
+    public static int decodeNumber(int number) {
             switch (mode) {
                 case UPPERCASE :
                     number = number % 27;
@@ -49,10 +44,7 @@ public class Decoding {
                     }
                     break;
             }
-
-        }while (number != -1);
-
-
+            return number;
     }
 
     public static int decodeTwoDigitNumber() {
