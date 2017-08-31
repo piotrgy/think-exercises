@@ -14,7 +14,12 @@ public class Decoding {
         LOWERCASE,
         PUNCTUATION
     }
+
     private static ModeType mode = ModeType.UPPERCASE;
+
+    public static ModeType getMode() {
+        return mode;
+    }
 
 
     public static int decodeNumber(int number) {
