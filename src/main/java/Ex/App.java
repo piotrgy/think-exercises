@@ -1,6 +1,8 @@
 package Ex;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 import static Ex.Decoding.*;
 
@@ -59,6 +61,28 @@ public class App
         final char LOWER = 'a';
         System.out.println(decodeLetter(5, UPPER));
         System.out.println(decodeLetter(6, LOWER));*/
+
+        List<Character> letter = new ArrayList<Character>();
+        System.out.println("Enter a digits, end by comma mark.");
+        System.out.println("At the end of all numbers type -1");
+        int inputNumber = getStringOfDigits();
+        int outputNumber = decodeNumber(inputNumber);
+
+        if (outputNumber != 0) {
+            final char UPPER = 'A';
+            final char LOWER = 'a';
+
+            switch (getMode()) {
+                case UPPERCASE : letter.add(decodeLetter(outputNumber, UPPER));
+                break;
+                case LOWERCASE : letter.add(decodeLetter(outputNumber, LOWER));
+                break;
+                case PUNCTUATION : letter.add(decodePunctuationMark());
+                break;
+            }
+
+        }
+
 
 
 
