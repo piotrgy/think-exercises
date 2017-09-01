@@ -26,7 +26,7 @@ public class Decoding {
             switch (mode) {
                 case UPPERCASE :
                     number = number % 27;
-                    System.out.println("Modulo 27: "+number);
+                    System.out.println(" Modulo 27: "+number);
                     if (number == 0) {
                         System.out.println("Changing to lowercase mode.");
                         mode = ModeType.LOWERCASE;
@@ -34,7 +34,7 @@ public class Decoding {
                     break;
                 case LOWERCASE :
                     number = number % 27;
-                    System.out.println("Modulo 27: "+number);
+                    System.out.println(" Modulo 27: "+number);
                     if (number == 0) {
                         System.out.println("Changing to punctuation mode.");
                         mode = ModeType.PUNCTUATION;
@@ -42,7 +42,7 @@ public class Decoding {
                     break;
                 case PUNCTUATION :
                     number = number % 9;
-                    System.out.println("Modulo 9: "+number);
+                    System.out.println(" Modulo 9: "+number);
                     if (number == 0) {
                         System.out.println("Changing to uppercase mode.");
                         mode = ModeType.UPPERCASE;

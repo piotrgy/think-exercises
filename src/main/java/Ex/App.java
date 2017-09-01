@@ -8,11 +8,9 @@ import static Ex.Decoding.*;
 
 /**
  * Hello world!
- *
  */
-public class App 
-{
-    public static void main( String[] args ) throws IOException {
+public class App {
+    public static void main(String[] args) throws IOException {
         //drukowanie wzoru z hashy
         /*System.out.println( "Hello World!" );
         polKwadratu();
@@ -52,8 +50,8 @@ public class App
         char c = decodePunctuationMark();
         System.out.println("You've entered "+c);*/
 
-        decodeNumber(54);
-        decodeNumber(41);
+        //decodeNumber(54);
+        //decodeNumber(41);
         //2 1 0 52 53 54 55 6 7 8 9 10 -1
 
         //letter's decoding
@@ -62,41 +60,37 @@ public class App
         System.out.println(decodeLetter(5, UPPER));
         System.out.println(decodeLetter(6, LOWER));*/
 
-        List<Character> letter = new ArrayList<Character>();
+        List<Character> letters = new ArrayList<Character>();
         System.out.println("Enter a digits, end by comma mark.");
-        System.out.println("At the end of all numbers type -1");
-        int inputNumber = getStringOfDigits();
-        int outputNumber = decodeNumber(inputNumber);
+        for (int i = 0; i<5;i++) {
+            int inputNumber = getStringOfDigits();
+            int outputNumber = decodeNumber(inputNumber);
 
-        if (outputNumber != 0) {
-            final char UPPER = 'A';
-            final char LOWER = 'a';
+            if (outputNumber != 0) {
+                final char UPPER = 'A';
+                final char LOWER = 'a';
 
-            switch (getMode()) {
-                case UPPERCASE : letter.add(decodeLetter(outputNumber, UPPER));
-                break;
-                case LOWERCASE : letter.add(decodeLetter(outputNumber, LOWER));
-                break;
-                case PUNCTUATION : letter.add(decodePunctuationMark());
-                break;
+                switch (getMode()) {
+                    case UPPERCASE :
+                        letters.add(decodeLetter(outputNumber, UPPER));
+                        break;
+                    case LOWERCASE :
+                        letters.add(decodeLetter(outputNumber, LOWER));
+                        break;
+                    case PUNCTUATION :
+                        letters.add(decodePunctuationMark());
+                        break;
+                }
             }
-
         }
-
-
-
-
+        System.out.println("Decoded message is:");
+        for (Character letter : letters) {
+            System.out.print(letter);
+        }
 
 
         //6	0	2	5	1	4	8	5
         //5	3	8	2	7	1	8
-
-
-
-
-
-
-
 
 
     }
