@@ -1,10 +1,8 @@
 package Ex;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 
-import static Ex.Decoding.*;
+import static Ex.Hashes.revertedTrapezoid;
 
 /**
  * Hello world!
@@ -15,6 +13,7 @@ public class App {
         /*System.out.println( "Hello World!" );
         polKwadratu();
         dwaTrojkaty();*/
+        revertedTrapezoid();
         //*********************************************************************
 
         //sprawdzanie poprawności metodą Luhna
@@ -60,7 +59,7 @@ public class App {
         System.out.println(decodeLetter(5, UPPER));
         System.out.println(decodeLetter(6, LOWER));*/
 
-        List<Character> letters = new ArrayList<Character>();
+        /*List<Character> letters = new ArrayList<Character>();
         System.out.println("Enter a digits, end by comma mark.");
         for (int i = 0; i<5;i++) {
             int inputNumber = getStringOfDigits();
@@ -86,7 +85,7 @@ public class App {
         System.out.println("Decoded message is:");
         for (Character letter : letters) {
             System.out.print(letter);
-        }
+        }*/
 
 
         //6	0	2	5	1	4	8	5
