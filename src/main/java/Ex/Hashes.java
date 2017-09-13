@@ -26,12 +26,24 @@ public class Hashes {
     public static void revertedTrapezoid() {
         for (int i = 0; i < 4; i++) {
             for (int j = 0; j < 9 - i; j++) {
-                if (j >= 0 && j <= i) {
+                if (j <= i) {
                     System.out.print(" ");
                 } else System.out.print("#");
             }
             System.out.println("");
         }
 
+    }
+
+    public static void lozenge() {
+        for (int i = 0; i < 4; i++) {
+            for (int j = 0; j < 6 + i; j++) {
+                if (j <= 3 - i) {
+                    System.out.print(" ");
+                }else System.out.print("#");
+            }
+            System.out.println("");
+        }
+        revertedTrapezoid();
     }
 }

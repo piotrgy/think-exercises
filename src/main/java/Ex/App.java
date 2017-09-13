@@ -2,6 +2,7 @@ package Ex;
 
 import java.io.IOException;
 
+import static Ex.Hashes.lozenge;
 import static Ex.Hashes.revertedTrapezoid;
 
 /**
@@ -13,7 +14,8 @@ public class App {
         /*System.out.println( "Hello World!" );
         polKwadratu();
         dwaTrojkaty();*/
-        revertedTrapezoid();
+        //revertedTrapezoid();
+        lozenge();
         //*********************************************************************
 
         //sprawdzanie poprawności metodą Luhna
