@@ -4,6 +4,7 @@ import java.io.IOException;
 
 import static Ex.Hashes.lozenge;
 import static Ex.Hashes.revertedTrapezoid;
+import static chapter3.Sorting.instertSorting;
 
 /**
  * Hello world!
@@ -15,7 +16,7 @@ public class App {
         polKwadratu();
         dwaTrojkaty();*/
         //revertedTrapezoid();
-        lozenge();
+        //lozenge();
         //*********************************************************************
 
         //sprawdzanie poprawności metodą Luhna
@@ -93,6 +94,18 @@ public class App {
         //6	0	2	5	1	4	8	5
         //5	3	8	2	7	1	8
 
+//Chapter 3
+        int[] someArray = {10, 98, 12, 76, 34, 24, 74, 12, 89, 34, 12,};
+        int [] copiedSortedArray = instertSorting(someArray);
+        displayIntArray(someArray);
+        displayIntArray(copiedSortedArray);
 
+    }
+
+    private static void displayIntArray(int[] displayedArray) {
+        for (int value : displayedArray) {
+            System.out.print(value + ", ");
+        }
+        System.out.println("");
     }
 }
