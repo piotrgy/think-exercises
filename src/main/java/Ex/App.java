@@ -1,9 +1,12 @@
 package Ex;
 
+import chapter3.Mode;
+
 import java.io.IOException;
 
 import static Ex.Hashes.lozenge;
 import static Ex.Hashes.revertedTrapezoid;
+import static chapter3.Mode.calculateMode;
 import static chapter3.Sorting.instertSorting;
 
 /**
@@ -95,11 +98,13 @@ public class App {
         //5	3	8	2	7	1	8
 
 //Chapter 3
-        int[] someArray = {10, 98, 12, 76, 34, 24, 74, 12, 89, 34, 12,};
+        int[] someArray = {10, 98, 12, 98, 76, 34, 24, 98, 74, 12, 89, 34, 12, 98};
         int [] copiedSortedArray = instertSorting(someArray);
         displayIntArray(someArray);
         displayIntArray(copiedSortedArray);
 
+        int[] mode = Mode.calculateMode(someArray);
+        System.out.println("The most frequent value in array is: " + mode[0] + " and occurs " + mode[1] + " times.");
     }
 
     private static void displayIntArray(int[] displayedArray) {
