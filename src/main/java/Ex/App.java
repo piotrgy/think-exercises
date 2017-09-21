@@ -98,13 +98,20 @@ public class App {
         //5	3	8	2	7	1	8
 
 //Chapter 3
-        int[] someArray = {10, 98, 12, 98, 76, 34, 24, 98, 74, 12, 89, 34, 12, 98};
+        /*int[] someArray = {10, 98, 12, 98, 76, 34, 24, 98, 74, 12, 89, 34, 12, 98};
         int [] copiedSortedArray = instertSorting(someArray);
         displayIntArray(someArray);
         displayIntArray(copiedSortedArray);
 
         int[] mode = Mode.calculateMode(someArray);
-        System.out.println("The most frequent value in array is: " + mode[0] + " and occurs " + mode[1] + " times.");
+        System.out.println("The most frequent value in array is: " + mode[0] + " and occurs " + mode[1] + " times.");*/
+
+        int[] someArray = {1, 9, 1, 10, 9, 7, 3, 2, 9, 7, 1, 8, 3, 1, 8, 10};
+        int[] histogramArray = Mode.histogram(10, someArray);
+        displayIntArray(histogramArray);
+
+
+
     }
 
     private static void displayIntArray(int[] displayedArray) {
