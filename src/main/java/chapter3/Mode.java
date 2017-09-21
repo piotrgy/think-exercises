@@ -30,4 +30,16 @@ public class Mode { //dominating value
         return result;
     }
 
+    public static int[] histogram(int maxValue, int[] intsArray) {
+        int [] histogram = new int[maxValue];
+        for (int i = 0; i < maxValue; i++) {
+            histogram[i] = 0;
+        }
+
+        for (int i = 0; i < intsArray.length; i++) {
+            histogram[intsArray[i] - 1]++;
+        }
+        return histogram;
+    }
+
 }
