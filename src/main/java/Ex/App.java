@@ -101,17 +101,22 @@ public class App {
         /*int[] someArray = {10, 98, 12, 98, 76, 34, 24, 98, 74, 12, 89, 34, 12, 98};
         int [] copiedSortedArray = instertSorting(someArray);
         displayIntArray(someArray);
-        displayIntArray(copiedSortedArray);
+        displayIntArray(copiedSortedArray);*/
+
+        int[] someArray = {1, 9, 1, 10, 9, 7, 3, 2, 9, 7, 1, 8, 9, 3, 1, 8, 9, 10};
 
         int[] mode = Mode.calculateMode(someArray);
-        System.out.println("The most frequent value in array is: " + mode[0] + " and occurs " + mode[1] + " times.");*/
+        System.out.println("Calculated by: calculateMode");
+        System.out.println("The most frequent value in array is: " + mode[0] + " and occurs " + mode[1] + " times.");
 
-        int[] someArray = {1, 9, 1, 10, 9, 7, 3, 2, 9, 7, 1, 8, 3, 1, 8, 10};
+
         int[] histogramArray = Mode.histogram(10, someArray);
+        System.out.println("Histogram of array:");
         displayIntArray(histogramArray);
 
-
-
+        mode = Mode.calculateModeByHistogram(histogramArray);
+        System.out.println("Calculated by: calculateModeByHistogram");
+        System.out.println("The most frequent value in array is: " + mode[0] + " and occurs " + mode[1] + " times.");
     }
 
     private static void displayIntArray(int[] displayedArray) {
