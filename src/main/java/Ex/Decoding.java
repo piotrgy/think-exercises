@@ -109,7 +109,7 @@ public class Decoding {
         Scanner s = new Scanner(System.in);
         int myInt = s.nextInt();
         char out;
-        switch (myInt) {
+        /*switch (myInt) {
             case 1 : out = '!'; break;
             case 2 : out = '?'; break;
             case 3 : out = ','; break;
@@ -119,7 +119,9 @@ public class Decoding {
             case 7 : out = '"'; break;
             case 8 : out = '\''; break;
             default: out = '*';
-        }
+        }*/
+        char[] punctuationMark = {'!', '?', ',', '.', ' ', ';', '"', '\'', '*'};
+        out = punctuationMark[(myInt - 1)];
         return out;
     }
 }
