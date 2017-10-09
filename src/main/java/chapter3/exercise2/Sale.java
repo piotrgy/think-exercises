@@ -3,22 +3,34 @@ package chapter3.exercise2;
 public class Sale {
     private int[][] sales;
 
-    public Sale() {
-        this.sales = new int[][]{{1856, 498, 30924, 87478, 328, 2653, 387, 3754, 387587, 2873, 276, 32},
-                {5865, 5456, 3983, 6464, 9957, 4785, 3875, 3838, 4959, 1122, 7766, 2534},
-                {23, 55, 67, 99, 265, 376, 232, 223, 4546, 564, 4544, 3434}};
+    public Sale(int agents, int months) {
+        this.sales = new int[agents][months];
     }
 
     public int[][] getSales() {
         return sales;
     }
 
-    public double arrayAverage(int intArray[], int ARRAY_SIZE) {
+    public void setSales(int[][] sales) {
+        this.sales = sales;
+    }
+
+    public double arrayAverage(int[] intArray, int months) {
         double sum = 0;
-        for (int i = 0; i < ARRAY_SIZE; i++) {
+        for (int i = 0; i < months; i++) {
             sum += intArray[i];
         }
-        double average = sum / ARRAY_SIZE;
+        double average = sum / months;
         return average;
+    }
+
+    public double highestAverageOfAgents(int[][] intArray, int agents, int months) {
+        double highestAverage = arrayAverage(intArray[0], months);
+        for (int agent = 1; agent < agents; agent++) {
+            double agentAverage = arrayAverage(intArray[agent], months);
+            if (agentAverage > highestAverage)
+                highestAverage = agentAverage;
+        }
+        return highestAverage;
     }
 }
