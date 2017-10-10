@@ -14,7 +14,7 @@ public class Ex2 {
         saleInCompany.setSales(sales);
 
         for (int agents = 0; agents < NUM_AGENTS; agents++) {
-            double averageOfAgent = saleInCompany.arrayAverage(saleInCompany.getSales()[agents], NUM_MONTHS);
+            double averageOfAgent = saleInCompany.arrayAverage(saleInCompany.getSales()[agents]);
             System.out.println("The average sale of " + (agents + 1) + " agent: " + averageOfAgent);
         }
 

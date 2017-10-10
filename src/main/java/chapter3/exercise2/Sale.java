@@ -20,19 +20,20 @@ public class Sale {
         this.sales = sales;
     }
 
-    public double arrayAverage(int[] intArray, int months) {
+    public double arrayAverage(int[] intArray) {
+        int arraySize = intArray.length;
         double sum = 0;
-        for (int i = 0; i < months; i++) {
+        for (int i = 0; i < arraySize; i++) {
             sum += intArray[i];
         }
-        double average = sum / months;
+        double average = sum / arraySize;
         return average;
     }
 
     public double highestAverageOfAgents(int[][] intArray, int agents, int months) {
-        double highestAverage = arrayAverage(intArray[0], months);
+        double highestAverage = arrayAverage(intArray[0]);
         for (int agent = 1; agent < agents; agent++) {
-            double agentAverage = arrayAverage(intArray[agent], months);
+            double agentAverage = arrayAverage(intArray[agent]);
             if (agentAverage > highestAverage)
                 highestAverage = agentAverage;
         }
