@@ -30,9 +30,9 @@ public class Sale {
         return average;
     }
 
-    public double highestAverageOfAgents(int[][] intArray, int agents, int months) {
+    public double highestAverageOfAgents(int[][] intArray) {
         double highestAverage = arrayAverage(intArray[0]);
-        for (int agent = 1; agent < agents; agent++) {
+        for (int agent = 1; agent < intArray.length; agent++) {
             double agentAverage = arrayAverage(intArray[agent]);
             if (agentAverage > highestAverage)
                 highestAverage = agentAverage;

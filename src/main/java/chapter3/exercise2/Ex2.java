@@ -18,7 +18,7 @@ public class Ex2 {
             System.out.println("The average sale of " + (agents + 1) + " agent: " + averageOfAgent);
         }
 
-        double highestAverage = saleInCompany.highestAverageOfAgents(saleInCompany.getSales(), NUM_AGENTS, NUM_MONTHS);
+        double highestAverage = saleInCompany.highestAverageOfAgents(saleInCompany.getSales());
         System.out.println("The highest average of " + NUM_AGENTS + " agents is: " + highestAverage);
 
         for (int agents = 0; agents < NUM_AGENTS; agents++) {
