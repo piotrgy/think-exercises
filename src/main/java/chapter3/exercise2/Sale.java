@@ -40,7 +40,7 @@ public class Sale {
         return highestAverage;
     }
 
-    public double arrayMedian(int[] intArray, int months) {
+    public double arrayMedian(int[] intArray) {
         int arraySize = intArray.length;
         int[] tempArray = copyOf(intArray, arraySize);
         Arrays.sort(tempArray);
@@ -56,9 +56,9 @@ public class Sale {
     }
 
     public double highestMedianOfAgents(int[][] intArray, int agents, int months) {
-        double highestMedian = arrayMedian(intArray[0], months);
+        double highestMedian = arrayMedian(intArray[0]);
         for (int agent = 1; agent < agents; agent++) {
-            double agentMedian = arrayMedian(intArray[agent], months);
+            double agentMedian = arrayMedian(intArray[agent]);
             if (agentMedian > highestMedian)
                 highestMedian = agentMedian;
         }

@@ -22,7 +22,7 @@ public class Ex2 {
         System.out.println("The highest average of " + NUM_AGENTS + " agents is: " + highestAverage);
 
         for (int agents = 0; agents < NUM_AGENTS; agents++) {
-            double medianOfAgent = saleInCompany.arrayMedian(saleInCompany.getSales()[agents], NUM_MONTHS);
+            double medianOfAgent = saleInCompany.arrayMedian(saleInCompany.getSales()[agents]);
             System.out.println("The median sale of " + (agents + 1) + " agent: " + medianOfAgent);
         }
 
