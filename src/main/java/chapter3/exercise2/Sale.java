@@ -8,10 +8,6 @@ import static java.util.Arrays.copyOf;
 public class Sale {
     private int[][] sales;
 
-    public Sale(int agents, int months) {
-        this.sales = new int[agents][months];
-    }
-
     public int[][] getSales() {
         return sales;
     }
