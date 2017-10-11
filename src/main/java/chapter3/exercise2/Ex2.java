@@ -26,7 +26,7 @@ public class Ex2 {
             System.out.println("The median sale of " + (agents + 1) + " agent: " + medianOfAgent);
         }
 
-        double highestMedian = saleInCompany.highestMedianOfAgents(saleInCompany.getSales(), NUM_AGENTS, NUM_MONTHS);
+        double highestMedian = saleInCompany.highestMedianOfAgents(saleInCompany.getSales());
         System.out.println("The highest median of " + NUM_AGENTS + " agents is: " + highestMedian);
     }
 }

@@ -55,9 +55,9 @@ public class Sale {
         return median;
     }
 
-    public double highestMedianOfAgents(int[][] intArray, int agents, int months) {
+    public double highestMedianOfAgents(int[][] intArray) {
         double highestMedian = arrayMedian(intArray[0]);
-        for (int agent = 1; agent < agents; agent++) {
+        for (int agent = 1; agent < intArray.length; agent++) {
             double agentMedian = arrayMedian(intArray[agent]);
             if (agentMedian > highestMedian)
                 highestMedian = agentMedian;
